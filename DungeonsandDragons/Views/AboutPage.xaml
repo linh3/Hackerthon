@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DungeonsandDragons.AboutPage" xmlns:vm="clr-namespace:DungeonsandDragons.ViewModels;" Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+            </StackLayout>
+            <Label Text="DEBUG SETTINGS" FontSize="Large" />
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label FontSize="Small" Text="Debug Settings Visible" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                  <Switch 
+                    x:Name="DebugSettings"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="DebugSettings_OnToggled"
+                    IsToggled="False"/>
+            </StackLayout>
+            <StackLayout x:Name= "Stack1" HorizontalOptions="FillAndExpand" Orientation="Horizontal" IsVisible= "true">
+                <Label FontSize="Small" Text="Use Mock Database" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                 <Switch 
+                    x:Name="UseMock"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="UseMock_OnToggled"
+                    IsToggled="False"/>
+        </StackLayout>
+            <StackLayout x:Name= "Stack2" HorizontalOptions="FillAndExpand" Orientation="Horizontal" IsVisible= "true">
+                <Label FontSize="Small" Text="Use POST" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                 <Switch 
+                    x:Name="UsePOST"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="UsePOST_OnToggled"
+                    IsToggled="False"/>
+        </StackLayout>
+            <StackLayout x:Name= "Stack3" HorizontalOptions="FillAndExpand" Orientation="Horizontal" IsVisible= "true">
+                <Label FontSize="Small" Text="Disable Random Numbers" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+             <Switch 
+                    x:Name="DisableRandom"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="DisableRandom_OnToggled"
+                    IsToggled="False"/>
+            </StackLayout>
+            <!-- MUST BIND HIT -->
+            <Label x:Name= "Label1" Text="Edit Hit" FontSize="Medium" IsVisible= "true"/>
+            <Entry Text="Hit" FontSize="Small" />
+            <StackLayout x:Name= "Stack4" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label FontSize="Small" Text="Enable 1 as Miss" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                <Switch 
+                    x:Name="Enable1"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="Enable1_OnToggled"
+                    IsToggled="False"/>
+            </StackLayout>
+            <StackLayout x:Name= "Stack5" HorizontalOptions="FillAndExpand" Orientation="Horizontal" IsVisible= "true">
+                <Label FontSize="Small" Text="Enable 20 as Hit" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                <Switch 
+                    x:Name="Enable20"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="Enable20_OnToggled"
+                    IsToggled="False"/>
+        </StackLayout>
+            <StackLayout x:Name= "Stack6" HorizontalOptions="FillAndExpand" Orientation="Horizontal" IsVisible= "true">
+                <Label FontSize="Small" Text="Healing Debug Settings" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+                 <Switch 
+                    x:Name="HealingDebug"
+                    HorizontalOptions="CenterAndExpand"
+                    Toggled="HealingDebug_OnToggled"
+                    IsToggled="False"/>
+        </StackLayout>
+        </StackLayout>
+</ContentPage>

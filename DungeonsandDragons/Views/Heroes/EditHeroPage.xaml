@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DungeonsandDragons.EditHeroPage" Title="Edit Hero">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalOptions="StartAndExpand">
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Name" FontSize="Medium" />
+            <Entry Text="{Binding Hero.Name}" FontSize="Small" />
+            <Label Text="ImageLink" FontSize="Medium" />
+            <Editor Text="{Binding Hero.ImageLink}" FontSize="Small" Margin="0" />
+            <Label Text="Level" FontSize="Medium" />
+            <Editor Text="{Binding Hero.Level}" FontSize="Small" Margin="0" />
+            <Label Text="Strength:" FontSize="Medium" />
+            <Editor Text="{Binding Hero.Strength}" FontSize="Small" Margin="0"/>
+            <Label Text="Defense:" FontSize="Medium"/>
+            <Editor Text="{Binding Hero.Defense}" FontSize="Small" Margin="0" />
+            <Label Text="Speed:" FontSize="Medium" />
+            <Editor Text="{Binding Hero.Speed}" FontSize="Small" Margin="0" />
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

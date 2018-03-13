@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DungeonsandDragons.ItemDetailPage" Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems> 
+    <ToolbarItem Text="Edit" Clicked="Edit_Clicked" />
+    <ToolbarItem Text="Delete" Clicked="Delete_Clicked" />
+    <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="{Binding Item.Name}" FontSize="Medium" />
+        <Label Text="{Binding Item.Description}" FontSize="Small" />
+        <Label Text="{Binding Item.Strength}" FontSize="Small" />
+        <Label Text="{Binding Item.Speed}" FontSize="Small" />
+        <Label Text="{Binding Item.Defense}" FontSize="Small" />
+        <Label Text="{Binding Item.Location}" FontSize="Small" />
+
+        
+    </StackLayout>
+</ContentPage>
